@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri Kategori</title>
+    <link rel="stylesheet" href="galeri.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="judul">WELCOME TO MY WEBSITE</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="artikel.html">Artikel</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="galeri">
+        <center>
+        <div class="galeri-img">
+            <h2>GALERI SAYA</h2>
+            <br>
+            <div style="background-color: salmon;"><H3>FOTO SAYA</H3></div>
+            <img src="fotosaya.png" onclick="tampilPreview(this)">
+            <img src="myfoto.jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-21 at 14.49.06 (1).jpeg" alt="foto saya" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 18.16.03.jpeg" onclick="tampilPreview(this)">
+            <div style="background-color: salmon;"><H3>FOTO KELUARGA</H3></div>
+            <img src="WhatsApp Image 2025-06-22 at 16.23.24.jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 16.25.47.jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 18.20.51.jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 18.20.52.jpeg" onclick="tampilPreview(this)">
+            <div style="background-color: salmon;"><H3>TEMAN</H3></div>
+            <img src="WhatsApp Image 2025-06-22 at 16.10.23 (1).jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 16.10.23.jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 18.20.50.jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 18.20.50 (1).jpeg" onclick="tampilPreview(this)">
+            <div style="background-color: salmon;"><H3>RENDOM</H3></div>
+            <img src="WhatsApp Image 2025-06-22 at 18.20.49.jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 18.20.49 (1).jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 18.29.58 (1).jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 16.10.24.jpeg" onclick="tampilPreview(this)">
+            <div style="background-color: salmon;"><H3>FOTO BEBAS</H3></div>
+            <img src="WhatsApp Image 2025-06-19 at 19.24.34.jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 16.10.24 (1).jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 18.20.49.jpeg" onclick="tampilPreview(this)">
+            <img src="WhatsApp Image 2025-06-22 at 16.10.25.jpeg" onclick="tampilPreview(this)">
+        </div>
+        </center>
+    </div>
+    </div>
+
+    <!-- Tambahan untuk preview gambar -->
+    <div id="overlay" class="overlay" onclick="tutupPreview()">
+        <img id="gambar-besar" class="gambar-preview" />
+    </div>
+
+    <script>
+        function tampilPreview(el) {
+            const overlay = document.getElementById('overlay');
+            const gambarBesar = document.getElementById('gambar-besar');
+            gambarBesar.src = el.src;
+            overlay.style.display = 'flex';
+        }
+
+        function tutupPreview() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+    </div>
+    
+</body>
+
+</html>
